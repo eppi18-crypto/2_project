@@ -1463,7 +1463,8 @@
     const videoUrlNamsaeng = "https://drive.google.com/file/d/1_0BXG44WEdzah2TmisqcauymnQn49zEq/preview";
     const videoUrlNamsaengDetail = "https://drive.google.com/file/d/1TZQTmgpsiSEc4ocuJNpjKOAIg01mgyA8/preview"; // 응용게임 후 보이는 모든 영상
     
-    const videoUrlGosari = "https://drive.google.com/file/d/1B1UA-mJFiMLDt23-aJLJTaQuMZr0e29z/preview";
+    const videoUrlGosariOriginal = "https://drive.google.com/file/d/1B1UA-mJFiMLDt23-aJLJTaQuMZr0e29z/preview";
+    const videoUrlGosariDetail = "https://drive.google.com/file/d/1SXoOFPh-plGMGrxuPRMlRdtDXDjZ_nO2/preview";
     const videoUrlSilhechigi = "https://drive.google.com/file/d/1Je7ssBTF8stDUbmCkn5PwkpuWf-Eb7V5/preview";
 
     // Suno AI API 기본 설정 (전송해주신 API 키 전면 하드코딩)
@@ -1513,7 +1514,7 @@
       if (namsaengVideo) namsaengVideo.src = videoUrlNamsaeng; // 남생아 놀아라 비디오 갱신 적용
       
       const gosariVideo = document.getElementById('video-gosari');
-      if (gosariVideo) gosariVideo.src = videoUrlGosari;
+      if (gosariVideo) gosariVideo.src = videoUrlGosariOriginal;
       
       const silhechigiVideo = document.getElementById('video-silhechigi');
       if (silhechigiVideo) silhechigiVideo.src = "https://drive.google.com/file/d/1AFxwWSco3JEgQzrkj_s8vogu7geXaDFh/preview"; // 바늘귀꿰자 첫 화면 원래 놀이 영상만 변경
@@ -2111,7 +2112,7 @@
       const data = gosariData[country];
       document.getElementById('gosari-detail-title').innerText = data.title;
       document.getElementById('gosari-detail-subtitle').innerText = data.subtitle;
-      document.getElementById('video-gosari-detail').src = videoUrlGosari;
+      document.getElementById('video-gosari-detail').src = videoUrlGosariDetail;
       renderCountrySelector('gosari-country-selector', gosariCountries, country, 'openGosariCountryPage');
       renderLyrics('gosari-lyrics-container', data);
       if (currentPageId !== 'page-gosari-detail') switchPage('page-gosari-detail');
