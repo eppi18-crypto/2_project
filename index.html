@@ -1456,14 +1456,15 @@
     
     // 오리지널 및 융합 미디어 재생기 프리셋 경로 설정
     const videoUrlBase = "https://drive.google.com/file/d/102R_7sDmdXo0XoKHAXYH3I1vP5OIfgLa/preview";
-    const videoUrlDaemun = "https://drive.google.com/file/d/1bCGvsBpC9Rhg-krC0-KA_Kd8T-reom5G/preview";
+    const videoUrlDaemunOriginal = "https://drive.google.com/file/d/1bCGvsBpC9Rhg-krC0-KA_Kd8T-reom5G/preview";
+    const videoUrlDaemun = "https://drive.google.com/file/d/1uFPG-kxRz-2wH4A1pa_0Iy-vCbEBwKrM/preview";
     
     // 남생아 놀아라 응용게임 전용 비디오 프리셋 경로 (요청하신 링크로 교체!)
     const videoUrlNamsaeng = "https://drive.google.com/file/d/1_0BXG44WEdzah2TmisqcauymnQn49zEq/preview";
     const videoUrlNamsaengDetail = "https://drive.google.com/file/d/1TZQTmgpsiSEc4ocuJNpjKOAIg01mgyA8/preview"; // 응용게임 후 보이는 모든 영상
     
-    const videoUrlGosari = "https://drive.google.com/file/d/1SXoOFPh-plGMGrxuPRMlRdtDXDjZ_nO2/preview";
-    const videoUrlSilhechigi = "https://drive.google.com/file/d/1AFxwWSco3JEgQzrkj_s8vogu7geXaDFh/preview";
+    const videoUrlGosari = "https://drive.google.com/file/d/1B1UA-mJFiMLDt23-aJLJTaQuMZr0e29z/preview";
+    const videoUrlSilhechigi = "https://drive.google.com/file/d/1Je7ssBTF8stDUbmCkn5PwkpuWf-Eb7V5/preview";
 
     // Suno AI API 기본 설정 (전송해주신 API 키 전면 하드코딩)
     const SUNO_API_KEY = "9b02618d19128d3773606336cde3c4fd";
@@ -1515,10 +1516,10 @@
       if (gosariVideo) gosariVideo.src = videoUrlGosari;
       
       const silhechigiVideo = document.getElementById('video-silhechigi');
-      if (silhechigiVideo) silhechigiVideo.src = videoUrlSilhechigi;
+      if (silhechigiVideo) silhechigiVideo.src = "https://drive.google.com/file/d/1AFxwWSco3JEgQzrkj_s8vogu7geXaDFh/preview"; // 바늘귀꿰자 첫 화면 원래 놀이 영상만 변경
       
       const daemunVideo = document.getElementById('video-daemun');
-      if (daemunVideo) daemunVideo.src = videoUrlDaemun;
+      if (daemunVideo) daemunVideo.src = videoUrlDaemunOriginal;
 
       // 선잇기 캔버스 기본 설정 가동
       initLineGame();
